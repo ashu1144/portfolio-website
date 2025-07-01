@@ -7,9 +7,9 @@ export const About = () => {
   return (
     <section
       id="about"
-      className=" py-4 px-[7vw] md:px-[7vw] lg:px-[10vw] font-sans mt-12 md:mt-12 lg:mt-13  "
+      className="  md:px-[7vw] lg:px-[10vw] font-sans  "
     >
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center lg:my-15 my-5">
+      <div className="flex flex-col-reverse md:flex-row justify-between items-center">
         {/* Left Side */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
           {/* Greeting */}

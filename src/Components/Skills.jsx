@@ -41,7 +41,7 @@ function Skills() {
               perspective={1000}
               scale={1.05}
               transitionSpeed={1000}
-              gyroscope={true}
+              gyroscope={false}
             >
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
                 {category.skills.map((skill) => (

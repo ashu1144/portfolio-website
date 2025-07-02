@@ -100,7 +100,7 @@ export const SkillsInfo = [
         "A fun and lively Minion‑themed website built with React, styled using Tailwind CSS, and brought to life with smooth animations powered by Framer Motion. This interactive site captures the mischievous charm of the Minions, making it a delightful experience for visitors. Deployed on GitHub Pages, it’s easily accessible and showcases a modern A fun and lively Minion‑themed website built with React, styled using Tailwind CSS, and brought to life with smooth animations powered by Framer Motion. This interactive site captures the mischievous charm of the Minions, making it a delightful experience for visitors. Deployed on GitHub Pages, it’s easily accessible and showcases a modern",
       image: animationimg,
       tags: ["React JS", "TailwindCSS", "Framer"],
-      github: "https://github.com/codingmastr/GitHub-Profile-Search-App-Using-React-JS",
+      github: " ",
       webapp: "https://ashu1144.github.io/Animation-website/",
     },
     {

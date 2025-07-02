@@ -25,7 +25,7 @@ function Projects() {
     return (
     <div 
     id='project'
-    className='py-24 pb-24 px-[12w] md:px-[7vw] lg:px-[20vw] font-sans relative'
+    className='py-24 pb-24 px-[12w] md:px-[7vw] lg:px-[14vw] font-sans relative'
     >
         <div className='flex flex-col items-center text-center mb-16'>
             <h2 className='text-4xl font-bold text-white'>Projects</h2>
@@ -92,7 +92,7 @@ function Projects() {
                 <img
                   src={selected.image}
                   alt={selected.title}
-                  className="lg:w-full max-h-[50vh] w-[95%] object-contain rounded-xl shadow-2xl"
+                  className="lg:w-full max-h-[40vh] w-[95%] object-contain rounded-xl shadow-2xl"
                 />
               </div>
               <div className="lg:p-8 p-6">

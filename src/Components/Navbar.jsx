@@ -4,8 +4,13 @@ import { FaGithub } from "react-icons/fa";
 import Hamburger from 'hamburger-react'
 
 export const Navbar = () => {
-  const tags = ["About", "skills", "projects", "education"];
   
+    const tags = [
+    { id: "about", label: "About" },
+    { id: "skills", label: "Skills" },
+    { id: "project", label: "Project" },
+    { id: "education", label: "Education" },
+  ];
 
   const [isScrolled , setIscrolled ] = useState(false)
   const [isOpen, setOpen] = useState(false)
@@ -36,6 +41,14 @@ export const Navbar = () => {
     window.removeEventListener('scroll',handelscroll)
     
   }, [])
+
+
+  const handleMenuItemClick = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   
 
 
@@ -56,15 +69,20 @@ export const Navbar = () => {
 
 
         {/* pc */}
-        <div className="hidden gap-5 text-white md:flex">
+        <div className="hidden gap-5 text-white md:flex cursor-pointer">
           {tags.map((tag, index) => (
-            <a key={index}>{tag}</a>
+            <a key={tag.id} onClick={()=>handleMenuItemClick(tag.id)} className="hover:text-[#8245ec]">{tag.id}</a>
           ))}
         </div>
 
         <div className="flex gap-5">
-          <FaLinkedin className="scale-160" />
-          <FaGithub className="scale-160" />
+          <a href="http://www.linkedin.com/in/shaik-mohammad-ashan-b7a864322"
+          ><FaLinkedin className="scale-160  hover:hover:opacity-50 " /></a>
+          
+          <a href="https://github.com/ashu1144">
+            <FaGithub className="scale-160 hover:opacity-50" />
+          </a>
+          
         </div>
 
         {/* mobile */}
@@ -79,7 +97,7 @@ export const Navbar = () => {
     ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
          <div className="flex flex-col items-center text-white ">
           {tags.map((tag, index) => (
-            <a className="text-2xl p-5 underline capitalize " key={index}>{tag}</a>
+            <a  className="text-2xl p-5 underline capitalize cursor-pointer" key={tag.labe} onClick={()=>handleMenuItemClick(tag.id)}>{tag.label}</a>
           ))}
         </div>
 

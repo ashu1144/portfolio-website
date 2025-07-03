@@ -32,18 +32,19 @@ import netlifyLogo from './assets/tech_logo/netlify.png';
 import vercelLogo from './assets/tech_logo/vercel.png';
 import postgreLogo from './assets/tech_logo/postgre.png';
 import csharpLogo from './assets/tech_logo/csharp.png';
-
+// Project Section Logo's
 import animationimg from './assets/Projects/Animation-website.png'
 import pastevaltimg from './assets/Projects/PasteVault.jpeg'
 import BlinkitImg from "./assets/Projects/Blinkit.jpeg"
 import JwtImg from "./assets/Projects/JWT.jpeg"
 import Myntra from './assets/Projects/MYNTRA.jpeg'
 import crudOperationImg from './assets/Projects/crud_operation.png'
+// Education Section Logo'
+import bwu from "./assets/education/bwu.jpeg"
+import pit from "./assets/education/pit.jpeg"
+import jharkand from "./assets/education/jharkand.avif"
 
-// Education Section Logo's
 
-
-// Project Section Logo's
 
 export const SkillsInfo = [
   {
@@ -156,3 +157,34 @@ export const SkillsInfo = [
     },
     
   ];  
+
+export const education = [
+    {
+      id: 0,
+      img: bwu,
+      school: "Brainware University",
+      date: "2022 - July 2025",
+      grade: "7.81 CGPA",
+      desc: "I have completed my Btech's degree (CSE) from Brainware University. During my time at BWU, I gained a strong foundation in programming, software development, and computer science principles. I have studied courses such as Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Web Development, and Software Engineering. I actively participated in various workshops and technical events, which enhanced my skills and knowledge. My experience at GLA University has been instrumental in shaping my technical abilities and professional growth.",
+      degree: "BTECH CSE",
+    },
+    {
+      id: 1,
+      img: pit,
+      school: "paradise institute of technology ",
+      date: "Sept 2019 - Aug 2022",
+      grade: "73.2%",
+      desc: "I completed my Diploma degree in Mechanical (ME) from PIT Throughout my studies, I developed a strong foundation in core mechanical subjects such as Thermodynamics, Fluid Mechanics, Strength of Materials, and Manufacturing Processes. These courses helped me understand how mechanical systems work and how engineering principles are applied in real-world scenarios. My time at BSA College gave me hands-on experience through lab work, workshops, and project-based learning. I also worked on group projects that improved my problem-solving skills, teamwork, and practical understanding of engineering design",
+      degree: "Bachelor of Science - BSC (Computer Science)",
+    },
+    {
+      id: 2,
+      img: jharkand,
+      school: "Jharkhand State Open School",
+      date: "Apr 2017 - March 2018",
+      grade: "78%",
+      desc: "I completed my class 10 education from jharkhand State Open School, where I studied Physics, Chemistry, and Mathematics (PCM) with Computer Science etc. ",
+      degree: "CBSE(XII) - PCM with Computer Science",
+    },
+    
+  ];

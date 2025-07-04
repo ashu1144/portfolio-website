@@ -2,6 +2,7 @@ import React from "react";
 import Tilt from "react-parallax-tilt";
 import { Typewriter } from "react-simple-typewriter";
 import img1 from '../assets/img1.jpg'
+import { motion } from 'framer-motion';
 
 export const About = () => {
   return (
@@ -61,7 +62,14 @@ export const About = () => {
           </a>
         </div>
         {/* Right Side */}
-        <div className="md:w-1/2 flex justify-center md:justify-end">
+        <motion.div
+        initial={{y:-50 , opacity:0}}
+        animate={{y:0 , opacity:1}}
+        transition={{duration:1 ,ease:"easeInOut"}}
+        
+        
+        
+        className="md:w-1/2 flex justify-center md:justify-end">
           <Tilt
             className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full"
             tiltMaxAngleX={20}
@@ -78,7 +86,7 @@ export const About = () => {
               className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
             />
           </Tilt>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

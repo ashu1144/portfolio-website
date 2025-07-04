@@ -1,48 +1,42 @@
-import React, { useState } from 'react'
-import { projects } from '../constants'
-
-
-
-
+import React, { useState } from "react";
+import { projects } from "../constants";
+import { motion } from "framer-motion";
 
 function Projects() {
+  const [selected, setSelected] = useState(null);
+ 
 
-    const[selected , setSelected] = useState(null)
+  const handleOpenModal = (pro) => {
+    setSelected(pro);
+  };
+  const handleCloseModal = () => {
+    setSelected(null);
+  };
 
-
-
-
-    const handleOpenModal =(pro)=>{
-        setSelected(pro)
-
-    }
-    const handleCloseModal = ()=>{
-        setSelected(null)
-    }
-
-
-
-    return (
-    <div 
-    id='project'
-    className='py-24 pb-24 px-[12w] md:px-[7vw] lg:px-[14vw] font-sans relative'
+  return (
+    <div
+      id="project"
+      className="py-24 pb-24 px-[12w] md:px-[7vw] lg:px-[14vw] font-sans relative"
     >
-        <div className='flex flex-col items-center text-center mb-16'>
-            <h2 className='text-4xl font-bold text-white'>Projects</h2>
-            <div className='w-32 h-1 bg-purple-500 mt-4'></div>
-            <p className='text-gray-400 mt-4 text-lg font-semibold'>
-            A show case of the project i have worked on , highlighting my skills and experiences in various technologies
-            </p>
-        </div>
-
-
+      <div className="flex flex-col items-center text-center mb-16">
+        <h2 className="text-4xl font-bold text-white">Projects</h2>
+        <div className="w-32 h-1 bg-purple-500 mt-4"></div>
+        <p className="text-gray-400 mt-4 text-lg font-semibold">
+          A show case of the project i have worked on , highlighting my skills
+          and experiences in various technologies
+        </p>
+      </div>
 
       {/* Projects Grid */}
       <div className="grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-5">
         {projects.map((project) => (
-          <div
+          <motion.div
+            initial={{opacity: 0,y:100}}
+            whileInView={{opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, ease:"easeInOut" }}
             key={project.id}
-            onClick={()=>handleOpenModal(project)}
+            onClick={() => handleOpenModal(project)}
             className="border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-purple-500/50 hover:-translate-y-2 transition-transform duration-300"
           >
             <div className="p-4">
@@ -70,10 +64,9 @@ function Projects() {
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-
 
       {selected && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4">
@@ -135,11 +128,8 @@ function Projects() {
           </div>
         </div>
       )}
-
-
-
     </div>
-  )
+  );
 }
 
-export default Projects
+export default Projects;

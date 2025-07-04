@@ -1,10 +1,13 @@
 import React from "react";
 import { SkillsInfo } from "../constants";
 import Tilt from "react-parallax-tilt";
+import { motion } from 'framer-motion';
 
 
 
 function Skills() {
+  const isTabletOrSmaller = window.innerWidth < 750;
+  
   return (
     <div
       id="skills"
@@ -24,7 +27,11 @@ function Skills() {
       {/* Skill Categories */}
       <div className="flex flex-wrap gap-1 lg:gap-5 py-10 justify-between">
         {SkillsInfo.map((category) => (
-          <div
+          <motion.div
+          initial={{ scale: isTabletOrSmaller ? "-80%":"150%" , opacity:0, y:50 }}
+          whileInView={{ scale: "100%", opacity:1 , y:0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
             key={category.title}
             className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-white 
           shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]"
@@ -61,7 +68,7 @@ function Skills() {
                 ))}
               </div>
             </Tilt>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

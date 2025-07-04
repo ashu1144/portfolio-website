@@ -31,7 +31,7 @@ function Projects() {
       <div className="grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-5">
         {projects.map((project) => (
           <motion.div
-            initial={{opacity: 0,y:100}}
+            initial={{opacity: 0.5,y:50}}
             whileInView={{opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease:"easeInOut" }}

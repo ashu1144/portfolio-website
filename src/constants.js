@@ -101,7 +101,7 @@ export const SkillsInfo = [
         "A fun and lively Minion‑themed website built with React, styled using Tailwind CSS, and brought to life with smooth animations powered by Framer Motion. This interactive site captures the mischievous charm of the Minions, making it a delightful experience for visitors. Deployed on GitHub Pages, it’s easily accessible and showcases a modern A fun and lively Minion‑themed website built with React, styled using Tailwind CSS, and brought to life with smooth animations powered by Framer Motion. This interactive site captures the mischievous charm of the Minions, making it a delightful experience for visitors. Deployed on GitHub Pages, it’s easily accessible and showcases a modern",
       image: animationimg,
       tags: ["React JS", "TailwindCSS", "Framer"],
-      github: " ",
+      github: "https://github.com/ashu1144/Animation-website",
       webapp: "https://ashu1144.github.io/Animation-website/",
     },
     {
@@ -131,8 +131,8 @@ export const SkillsInfo = [
         "I built a responsive Blinkit web clone using HTML, CSS, and JavaScript, designed to work seamlessly on 📱 mobile & 🖥️ PC and tablets ",
       image: BlinkitImg,
       tags: ["HTML","CSS","Javascript"],
-      github: " ",
-      webapp: " ",
+      github: "https://github.com/ashu1144/blinkit_clone",
+      webapp: "https://ashu1144.github.io/blinkit_clone/",
     },
     {
       id: 4,

@@ -31,7 +31,7 @@ export const Education = () => {
 
         {education.map((edu, index) => {
           const controls = useAnimation();
-          const [ref, inView] = useInView({
+           const [ref, inView] = useInView({
             threshold: 0.3, // Adjust sensitivity
             triggerOnce: false,
           });
@@ -64,7 +64,7 @@ export const Education = () => {
 
               <motion.div
                 ref={ref}
-                initial={{ opacity: 0, x: initialX }}
+                // initial={{ opacity: 0, x: initialX }}
                 animate={controls}
                 transition={{
                   ease: [0, 0.55, 0.45, 1],

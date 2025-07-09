@@ -6,6 +6,9 @@
 html {
   scroll-behavior: smooth;
 }
+html body {
+  scroll-behavior: smooth;
+}
 
 @layer utilities {
     .clip-path-custom {

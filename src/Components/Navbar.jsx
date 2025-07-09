@@ -14,6 +14,7 @@ export const Navbar = () => {
   const [isScrolled, setIscrolled] = useState(false);
   const [isOpen, setOpen] = useState(false);
   const [lastScrolled, SetlastScrolled] = useState(window.scrollY);
+  const [isactive , setActive ] = useState(null)
 
   useEffect(() => {
     const handelscroll = () => {
@@ -61,9 +62,10 @@ export const Navbar = () => {
         <div className="hidden gap-5 text-white md:flex cursor-pointer">
           {tags.map((tag, index) => (
             <a
-              key={tag.id}
+              key={index}
+              tabIndex={0} 
               onClick={() => handleMenuItemClick(tag.id)}
-              className="hover:text-[#8245ec]"
+              className={`hover:text-[#8245ec] focus:text-[#8245ec] `}
             >
               {tag.id}
             </a>

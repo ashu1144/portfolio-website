@@ -1,7 +1,21 @@
 import React from 'react'
 import { education } from "../constants"; 
+import { useState ,useEffect } from 'react';
+import {delay, easeIn, easeInOut, motion} from "framer-motion"
 export const Education = () => {
+  const  [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 1280);
+    const handelsize =()=>setIsMobile(window.innerWidth<1280)
+    window.addEventListener("resize",handelsize)
+    return () => window.addEventListener("resize",handelsize)
+  }, [])
+
+  console.log(isMobile)
+
   return (
+
 
     <section
       id="education"
@@ -39,7 +53,11 @@ export const Education = () => {
             </div>
 
             {/* Content Section */}
-            <div
+            <motion.div
+              initial={!isMobile? index % 2 === 0 ? {x:48} : {x:-48}:""}
+              whileInView = {!isMobile && index % 2 === 0 ? {x:0} : {x:0}}
+               viewport={{amount: 0.3 }}
+              transition={{duration:0.5 , ease:[0.7, 0, 0.84, 0],stiffness: 50, damping: 15, delay:0}}
               className={`w-full xl:max-w-md p-4 sm:p-8 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] ${
                 index % 2 === 0 ? "xl:ml-[1vw]" : "xl:mr-[1vw]"
               } xl:ml-45 xl:mr-44 ml-8 transform transition-transform duration-300 hover:scale-105`}
@@ -72,7 +90,7 @@ export const Education = () => {
 
               <p className="mt-4 text-gray-400 font-bold">Grade: {edu.grade}</p>
               <p className="mt-4 text-gray-400">{edu.desc}</p>
-            </div>
+            </motion.div>
           </div>
         ))}
       </div>

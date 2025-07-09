@@ -10,7 +10,7 @@ export const About = () => {
       id="about"
       className="  md:px-[7vw] lg:px-[10vw] font-sans  "
     >
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center">
+      <div className="flex flex-col-reverse md:flex-row-reverse justify-between items-center">
         {/* Left Side */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
           {/* Greeting */}
@@ -50,10 +50,9 @@ export const About = () => {
             href="https://drive.google.com/uc?export=download&id=18MP-wnADAPqJ3537QKwaCeuj88oAwZPR"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
+            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105 drop-shadow-[0_5px_10px_rgba(130,69,236,.5)] hover:drop-shadow-[0_10px_40px_rgba(130,69,236,.5)]"
             style={{
               background: "linear-gradient(90deg, #8245ec, #a855f7)",
-              boxShadow: "0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec",
               zIndex: 50,
               position: "relative",
             }}
@@ -69,9 +68,9 @@ export const About = () => {
         
         
         
-        className="md:w-1/2 flex justify-center md:justify-end">
+        className="md:w-1/2 flex justify-center md:justify-start">
           <Tilt
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full"
+            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-4xl "
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
             perspective={1000}
@@ -83,7 +82,7 @@ export const About = () => {
               //   src={profileImage}
               src={img1}
               alt="Ashan"
-              className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
+              className="w-full h-full rounded-4xl transform scale-x-[-1] object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,.5)] hover:drop-shadow-[0_10px_40px_rgba(130,69,236,.5)]"
             />
           </Tilt>
         </motion.div>

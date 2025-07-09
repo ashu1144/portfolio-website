@@ -30,8 +30,8 @@ function Skills() {
           <motion.div
           initial={{ scale: isTabletOrSmaller ? "50%":"150%" , opacity:0 }}
           whileInView={{ scale: "100%", opacity:1 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, ease:"easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.6, ease:[0.25, 0.1, 0.25, 1] ,stiffness: 40, damping: 20 }}
             key={category.title}
             className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-white 
           shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]"

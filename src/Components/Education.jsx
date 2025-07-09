@@ -1,20 +1,22 @@
-import React from "react";
-import { education } from "../constants";
-import { useState, useEffect } from "react";
-import { delay, easeIn, easeInOut, motion } from "framer-motion";
+import React from 'react'
+import { education } from "../constants"; 
+import { useState ,useEffect } from 'react';
+import {delay, easeIn, easeInOut, motion} from "framer-motion"
 export const Education = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const  [isDesktop, setIsDesktop] = useState(null);
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 1280);
-    const handelsize = () => setIsMobile(window.innerWidth < 1280);
-    window.addEventListener("resize", handelsize);
-    return () => window.addEventListener("resize", handelsize);
-  }, []);
+    setIsDesktop(window.innerWidth > 1280);
+    const handelsize =()=>setIsDesktop(window.innerWidth>1280)
+    window.addEventListener("resize",handelsize)
+    return () => window.addEventListener("resize",handelsize)
+  }, [])
 
-  console.log(isMobile);
+  console.log(isDesktop)
 
   return (
+
+
     <section
       id="education"
       className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-3"
@@ -24,8 +26,7 @@ export const Education = () => {
         <h2 className="text-4xl font-bold text-white">EDUCATION</h2>
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
         <p className="text-gray-400 mt-4 text-lg font-semibold">
-          My education has been a journey of learning and development. Here are
-          the details of my academic background
+          My education has been a journey of learning and development. Here are the details of my academic background
         </p>
       </div>
 
@@ -53,18 +54,10 @@ export const Education = () => {
 
             {/* Content Section */}
             <motion.div
-              {...(!isMobile && {
-                initial: index % 2 === 0 ? { x: 48 } : { x: -48 },
-                whileInView: { x: 0 },
-                transition: {
-                  duration: 0.5,
-                  ease: [0.7, 0, 0.84, 0],
-                  stiffness: 50,
-                  damping: 15,
-                  delay: 0,
-                },
-                viewport: { once: true, amount: 0.3 },
-              })}
+              initial={isDesktop ? index % 2 === 0 ? {x:48} : {x:-47}:""}
+              whileInView ={ isDesktop ?index % 2 === 0 ? {x:0} : {x:0}:""}
+               viewport={{amount: 0.5 }}
+              transition={{duration:0.5 , ease:[0.7, 0, 0.84, 0],stiffness: 50, damping: 15, delay:0}}
               className={`w-full xl:max-w-md p-4 sm:p-8 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] ${
                 index % 2 === 0 ? "xl:ml-[1vw]" : "xl:mr-[1vw]"
               } xl:ml-45 xl:mr-44 ml-8 transform transition-transform duration-300 hover:scale-105`}
@@ -102,5 +95,5 @@ export const Education = () => {
         ))}
       </div>
     </section>
-  );
-};
+   )
+}

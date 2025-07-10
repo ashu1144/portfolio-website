@@ -1,18 +1,20 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
 import { Typewriter } from "react-simple-typewriter";
-import img1 from '../assets/img1.jpg'
-import { motion } from 'framer-motion';
+import img1 from "../assets/img1.jpg";
+import { easeInOut, motion } from "framer-motion";
 
 export const About = () => {
   return (
-    <section
-      id="about"
-      className="  md:px-[7vw] lg:px-[10vw] font-sans  "
-    >
+    <section id="about" className="  md:px-[7vw] lg:px-[10vw] font-sans  ">
       <div className="flex flex-col-reverse md:flex-row-reverse justify-between items-center">
         {/* Left Side */}
-        <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
+        <motion.div
+        initial={{x:"40px" , opacity:0}}
+        animate={{x:"0px" , opacity:1}}
+        transition={{ease:easeInOut , duration:1 , delay:0.5 }}
+        
+        className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
           {/* Greeting */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
             Hi, I am
@@ -35,7 +37,12 @@ export const About = () => {
             />
           </h3>
           {/* About Me Paragraph */}
-          <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
+          <motion.p
+          initial={{opacity:0}}
+          animate={{opacity:1}}
+          transition={{ease:easeInOut , duration:1 , delay:1.5}}
+        
+           className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed p-5 sm:p-0">
             I am a passionate frontend and MERN stack developer with a strong
             focus on building responsive and interactive web applications. As a
             fresher, I’ve developed several full-stack projects that demonstrate
@@ -44,31 +51,27 @@ export const About = () => {
             experience using tools like Framer Motion. I'm always eager to learn
             and apply modern web technologies to create clean, engaging, and
             scalable applications
-          </p>
+          </motion.p>
+
           {/* Resume Button */}
           <a
             href="https://drive.google.com/uc?export=download&id=18MP-wnADAPqJ3537QKwaCeuj88oAwZPR"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105 drop-shadow-[0_5px_10px_rgba(130,69,236,.5)] hover:drop-shadow-[0_10px_40px_rgba(130,69,236,.5)]"
-            style={{
-              background: "linear-gradient(90deg, #8245ec, #a855f7)",
-              zIndex: 50,
-              position: "relative",
-            }}
+            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold relative bg-zinc-900 shadow-lg hover:shadow-blue-500 transition-all duration-800 items-center justify-center hover:text-blue-500 
+            before:absolute  before:bottom-0  before:left-1/2  before:translate-x-[-50%]  before:w-0  before:h-0    before:bg-blue-500  before:rounded-2xl  before:transition-all  before:duration-800  before:ease-in-out  hover:before:w-full  hover:before:h-0.5  before:z-0  overflow-hidden "
           >
             DOWNLOAD CV
           </a>
-        </div>
+        </motion.div>
+        
         {/* Right Side */}
         <motion.div
-        initial={{y:-50 , opacity:0}}
-        animate={{y:0 , opacity:1}}
-        transition={{duration:1 ,ease:"easeInOut"}}
-        
-        
-        
-        className="md:w-1/2 flex justify-center md:justify-start">
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="md:w-1/2 flex justify-center md:justify-start"
+        >
           <Tilt
             className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-4xl "
             tiltMaxAngleX={20}

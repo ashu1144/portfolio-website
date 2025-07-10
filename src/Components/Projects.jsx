@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { projects } from "../constants";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 
 function Projects() {
   const [selected, setSelected] = useState(null);
@@ -14,7 +14,11 @@ function Projects() {
   };
 
   return (
-    <div
+    <motion.div
+    initial={{y:"10%" , opacity:0}}
+    whileInView={{y:"0", opacity:1}}
+    transition={{ease:easeInOut , duration:1}}
+    viewport={{ once:true, amount: ".01" }}
       id="project"
       className="py-24 pb-24 px-[12w] md:px-[7vw] lg:px-[14vw] font-sans relative"
     >
@@ -128,7 +132,7 @@ function Projects() {
           </div>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }
 

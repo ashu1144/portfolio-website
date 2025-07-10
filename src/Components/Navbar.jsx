@@ -74,22 +74,22 @@ export const Navbar = () => {
 
         <div className="hidden md:flex gap-5">
           <a href="http://www.linkedin.com/in/shaik-mohammad-ashan-b7a864322">
-            <FaLinkedin className="scale-160  hover:hover:opacity-50 " />
+            <FaLinkedin className="scale-160  hover:hover:opacity-50 hover:rotate-360 transition-all duration-600 " />
           </a>
 
           <a href="https://github.com/ashu1144">
-            <FaGithub className="scale-160 hover:opacity-50" />
+            <FaGithub className="scale-160 hover:opacity-50 hover:rotate-360 transition-all duration-600" />
           </a>
         </div>
 
         {/* mobile */}
         <div className="md:hidden flex flex-row gap-3 justify-center items-center">
           <a href="http://www.linkedin.com/in/shaik-mohammad-ashan-b7a864322">
-            <FaLinkedin className="scale-160  hover:hover:opacity-50 " />
+            <FaLinkedin className="scale-160  hover:opacity-50  transition-all duration-600 hover:rotate-360 mr-1 " />
           </a>
 
           <a href="https://github.com/ashu1144">
-            <FaGithub className="scale-160 hover:opacity-50" />
+            <FaGithub className="scale-160 hover:opacity-50 hover:rotate-360 transition-all duration-600" />
           </a>
           <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>

@@ -58,7 +58,7 @@ export const About = () => {
             href="https://drive.google.com/uc?export=download&id=18MP-wnADAPqJ3537QKwaCeuj88oAwZPR"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold relative bg-zinc-900 shadow-lg hover:shadow-blue-500 transition-all duration-800 items-center justify-center hover:text-blue-500 
+            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold relative bg-zinc-900 shadow-lg hover:shadow-blue-500 transition-all duration-800 items-center justify-center hover:text-blue-500 delay-400 
             before:absolute  before:bottom-0  before:left-1/2  before:translate-x-[-50%]  before:w-0  before:h-0    before:bg-blue-500  before:rounded-2xl  before:transition-all  before:duration-800  before:ease-in-out  hover:before:w-full  hover:before:h-0.5  before:z-0  overflow-hidden "
           >
             DOWNLOAD CV

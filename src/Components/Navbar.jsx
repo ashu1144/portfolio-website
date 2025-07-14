@@ -99,7 +99,7 @@ export const Navbar = () => {
         className={`transition-all duration-1000 ease-in-out absolute top-0 bg-[#050414] bg-opacity-10 backdrop-blur-md shadow-md w-full pt-15 z-0
     ${
       isOpen
-        ? "h-100 opacity-100"
+        ? "h-90 opacity-100"
         : "h-0 overflow-hidden opacity-0 "
     }`}
       >

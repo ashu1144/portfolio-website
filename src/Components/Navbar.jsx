@@ -59,7 +59,7 @@ export const Navbar = () => {
         </div>
 
         {/* pc */}
-        <div className="hidden gap-5 text-white md:flex cursor-pointer">
+        <div className="hidden gap-5 text-white md:flex cursor-pointer z-20">
           {tags.map((tag, index) => (
             <a
               key={index}
@@ -72,7 +72,7 @@ export const Navbar = () => {
           ))}
         </div>
 
-        <div className="hidden md:flex gap-5">
+        <div className="hidden md:flex gap-5 z-20">
           <a href="http://www.linkedin.com/in/shaik-mohammad-ashan-b7a864322">
             <FaLinkedin className="scale-160  hover:hover:opacity-50 hover:rotate-360 transition-all duration-600 " />
           </a>

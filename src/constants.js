@@ -164,7 +164,7 @@ export const education = [
       img: bwu,
       school: "Brainware University",
       date: "2022 - July 2025",
-      grade: "7.56 SCGPA",
+      grade: "7.74 SCGPA",
       desc: "I have completed my Btech's degree (CSE) from Brainware University. During my time at BWU, I gained a strong foundation in programming, software development, and computer science principles. I have studied courses such as Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Web Development, and Software Engineering. I actively participated in various workshops and technical events, which enhanced my skills and knowledge. My experience at Brainware University has been instrumental in shaping my technical abilities and professional growth.",
       degree: "BTECH CSE",
     },

@@ -10,12 +10,13 @@ function Contact() {
     const [isSent, setIsSent] = useState(false);
 
       const sendEmail = (e) => {
+        console.log(e)
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_frytr9j",
-        "template_563owtk",  // Replace with your EmailJS Template ID
+        "service_w0akbq2",
+        "template_q1f1i4q",  // Replace with your EmailJS Template ID
         form.current,
         "Du2yYba9Zj2OKSKD0"  // Replace with your EmailJS Public Key
       )

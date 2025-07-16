@@ -2,14 +2,14 @@ import React from "react";
 import { SkillsInfo } from "../constants";
 import Tilt from "react-parallax-tilt";
 import { motion } from 'framer-motion';
-import { useMemo } from "react";
+
 
 
 
 function Skills() {
 
 
-  const isTabletOrSmaller = useMemo(() => window.innerWidth < 750, [window.innerWidth])
+  
   
   return (
     <div
@@ -31,7 +31,7 @@ function Skills() {
       <div className="flex flex-wrap gap-1 lg:gap-5 py-10 justify-between">
         {SkillsInfo.map((category) => (
           <motion.div
-          initial={{ scale: isTabletOrSmaller ? "80%":"120%" , opacity:0 }}
+          initial={{ scale:"120%" , opacity:0 }}
           whileInView={{ scale: "100%", opacity:1 }}
           viewport={{ once:true, amount: 0.3 }}
           transition={{ duration: 0.6, type:"tween" ,stiffness: 50, damping: 35 }}

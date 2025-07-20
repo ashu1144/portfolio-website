@@ -174,7 +174,7 @@ export const education = [
       school: "paradise institute of technology ",
       date: "2022",
       grade: "78%",
-      desc: "I completed my Diploma degree in Mechanical (ME) from PIT Throughout my studies, I developed a strong foundation in core mechanical subjects such as Thermodynamics, Fluid Mechanics, Strength of Materials, and Manufacturing Processes. These courses helped me understand how mechanical systems work and how engineering principles are applied in real-world scenarios. My time at BSA College gave me hands-on experience through lab work, workshops, and project-based learning. I also worked on group projects that improved my problem-solving skills, teamwork, and practical understanding of engineering design",
+      desc: "I completed my Diploma degree in Mechanical (ME) from PIT Throughout my studies, I developed a strong foundation in core mechanical subjects such as Thermodynamics, Fluid Mechanics, Strength of Materials, and Manufacturing Processes. These courses helped me understand how mechanical systems work and how engineering principles are applied in real-world scenarios.",
       degree: "Diploma Mechanical Engineering",
     },
     {

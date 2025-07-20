@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { education } from "../constants";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import "../App.css";
 
 export const Education = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1280);
@@ -31,21 +32,22 @@ export const Education = () => {
 
         {education.map((edu, index) => {
           const controls = useAnimation();
-           const [ref, inView] = useInView({
+          const [ref, inView] = useInView({
             threshold: 0.3, // Adjust sensitivity
             triggerOnce: false,
           });
 
-          const initialX = isDesktop ? [48,-48]: [0,0];
+          const initialX = isDesktop ? [150, -150] : [0, 0];
           useEffect(() => {
             if (inView) {
               controls.start({ opacity: 1, x: 0 });
             } else {
-              controls.start({ opacity: 1, x: index % 2 === 0 ? initialX[0] : initialX[1] });
+              controls.start({
+                opacity: 1,
+                x: index % 2 === 0 ? initialX[0] : initialX[1],
+              });
             }
           }, [inView, controls]);
-
-         
 
           return (
             <div
@@ -62,42 +64,43 @@ export const Education = () => {
                 />
               </div>
 
+              {/* cards div */}
               <motion.div
                 ref={ref}
                 // initial={{ opacity: 0, x: initialX }}
                 animate={controls}
                 transition={{
                   ease: [0, 0.55, 0.45, 1],
-                  duration: 0.3
+                  duration: 0.3,
                 }}
-                className={`w-full xl:max-w-md p-4 sm:p-8 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] ${
-                  index % 2 === 0 ? "xl:ml-[1vw]" : "xl:mr-[1vw]"
+                className={` w-full mt-10 xl:max-w-md p-1 sm:p-0 rounded-2xl backdrop-blur-md   ${
+                  index % 2 === 0 ? "xl:ml-[-6vw]" : "xl:mr-[-6vw]"
                 } xl:ml-45 xl:mr-44 ml-8 transform transition-transform duration-300 hover:scale-105`}
               >
-                <div className="flex items-center space-x-6">
-                  <div className="w-24 h-16 bg-white rounded-md overflow-hidden">
-                    <img
-                      src={edu.img}
-                      alt={edu.school}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-xl sm:text-xl font-semibold text-white">
-                        {edu.degree}
-                      </h3>
-                      <h4 className="text-md sm:text-sm text-gray-300">
-                        {edu.school}
-                      </h4>
+                <div className="card">
+
+                  <div className="content py-[36px] px-2 md:py-[36px]">
+
+                    {/* first section of var */}
+                    <div className="flex gap-1 justify-center items-center">
+                      <div className="w-1/2 md:w-25 flex justify-center items-cente">
+                         <img src={edu.img} alt="" className=" h-20 w-[80px] sm:w-18 object-cover border-2 border-zinc-500" />
+                      </div>
+                      <div className="">
+                        <h1 className=" text-[18px] text-zinc-900 font-bold capitalize ">{edu.school}</h1>
+                        <p className=" font-semibold text-zinc-900 text-[15px] ">
+                          Grade: {edu.grade}
+                        </p>
+                      </div>
                     </div>
-                    <p className="text-sm text-gray-500 mt-2">{edu.date}</p>
+
+                    <p className="para mt-1 text-zinc-300  pl-2 md:p-5 ">{edu.desc}</p>
+
+
                   </div>
+
+
                 </div>
-                <p className="mt-4 text-gray-400 font-bold">
-                  Grade: {edu.grade}
-                </p>
-                <p className="mt-4 text-gray-400">{edu.desc}</p>
               </motion.div>
             </div>
           );

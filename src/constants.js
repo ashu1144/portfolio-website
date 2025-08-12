@@ -33,11 +33,13 @@ import vercelLogo from './assets/tech_logo/vercel.png';
 import postgreLogo from './assets/tech_logo/postgre.png';
 import csharpLogo from './assets/tech_logo/csharp.png';
 // Project Section Logo's
+import foodDeliImg from './assets/Projects/foodDeli.png'
 import animationimg from './assets/Projects/Animation-website.png'
 import pastevaltimg from './assets/Projects/PasteVault.jpeg'
 import BlinkitImg from "./assets/Projects/Blinkit.jpeg"
 import JwtImg from "./assets/Projects/JWT.jpeg"
 import Myntra from './assets/Projects/MYNTRA.jpeg'
+import editorapp from "./assets/Projects/editorApp.jpeg"
 import crudOperationImg from './assets/Projects/crud_operation.png'
 // Education Section Logo'
 import bwu from "./assets/education/bwu.jpeg"
@@ -100,7 +102,7 @@ export const SkillsInfo = [
       description:
         "A fun and lively Minion‑themed website built with React, styled using Tailwind CSS, and brought to life with smooth animations powered by Framer Motion. This interactive site captures the mischievous charm of the Minions, making it a delightful experience for visitors. Deployed on GitHub Pages, it’s easily accessible and showcases a modern A fun and lively Minion‑themed website built with React, styled using Tailwind CSS, and brought to life with smooth animations powered by Framer Motion. This interactive site captures the mischievous charm of the Minions, making it a delightful experience for visitors. Deployed on GitHub Pages, it’s easily accessible and showcases a modern",
       image: animationimg,
-      tags: ["React JS", "TailwindCSS", "Framer"],
+      tags: ["React JS", "TailwindCSS", "Framer-motion", "More"],
       github: "https://github.com/ashu1144/Animation-website",
       webapp: "https://ashu1144.github.io/Animation-website/",
     },
@@ -108,10 +110,10 @@ export const SkillsInfo = [
       id: 1,
       title: "PasteVault",
       description:
-      " Create, Store, Edit, and Delete Pastes: Allows users to manage pastes with options to create, store, edit, or delete.",
+        " Create, Store, Edit, and Delete Pastes: Allows users to manage pastes with options to create, store, edit, or delete.",
       image: pastevaltimg,
-      tags: ["React JS", "Redux", "TailwindCSS"],
-      github: " ",
+      tags: ["React JS", "Redux", "TailwindCSS", "JSX", "More"],
+      github: "https://github.com/ashu1144/pasteVault",
       webapp: " ",
     },
     {
@@ -119,9 +121,9 @@ export const SkillsInfo = [
       title: "User CRUD Application",
       description:
         "This project is a full-stack User Management Application that demonstrates CRUD (Create, Read, Update, Delete) operations using React, Express.js, and MongoDB",
-      image: crudOperationImg ,
-      tags: ["Express.js", "MongoDB" ,"React.js ", "Tailwind CSS"],
-      github: " ",
+      image: crudOperationImg,
+      tags: ["Express.js", "MongoDB", "React.js ", "Tailwind CSS", "More"],
+      github: "https://github.com/ashu1144/Crud-Operations",
       webapp: " ",
     },
     {
@@ -130,7 +132,7 @@ export const SkillsInfo = [
       description:
         "I built a responsive Blinkit web clone using HTML, CSS, and JavaScript, designed to work seamlessly on 📱 mobile & 🖥️ PC and tablets ",
       image: BlinkitImg,
-      tags: ["HTML","CSS","Javascript"],
+      tags: ["HTML", "CSS", "Javascript", "Responsible", "more"],
       github: "https://github.com/ashu1144/blinkit_clone",
       webapp: "https://ashu1144.github.io/blinkit_clone/",
     },
@@ -140,22 +142,36 @@ export const SkillsInfo = [
       description:
         "A full-stack authentication system built from scratch using Express.js and React. It features secure user registration and login with JWT token handling, where passwords are securely hashed using bcrypt, and tokens are stored in HTTP-only cookies to enhance protection against XSS and CSRF attacks. The React frontend improves user experience with real-time toast notifications and a dynamic typewriter effect for engaging UI elements📝 User Registration: Register new users with hashed passwords",
       image: JwtImg,
-      tags: ["Express.js" , "React.js" , "JSON Web Token (JWT)","Api", "MongoDB"],
-      github: " ",
+      tags: ["Express.js", "React.js", "(JWT)", "Api", "MongoDB", "more"],
+      github: "https://github.com/ashu1144/jwt",
       webapp: " ",
     },
-    
     {
-      id: 5,
-      title: "Myntra clone",
+       id: 5,
+      title: "Food Delivery App",
       description:
-        "I recently completed a project where I cloned the Mynta website using HTML and CSS. This hands-on experience allowed me to deepen my understanding of web development fundamentals while honing my design skill",
-      image: Myntra,
-      tags: ["HTML", "CSS", "JavaScript", "Framer Motion"],
-      github: " ",
-      webapp: " ",
+        "I developed a fully functional food delivery web application where users can browse restaurants, view menus, and place orders. This project enhanced my skills in building interactive user interfaces, managing state, and integrating APIs for real-time data handling.",
+      image: foodDeliImg,
+      tags: [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "API Integration",
+        "Responsive",
+      ],
+      github: "https://github.com/ashu1144/food-delivery-web-app",
+      webapp: "https://food-delivery-web-app-navy.vercel.app/", 
     },
-    
+    {
+      id: 6,
+      title: "Text Editor",
+      description:
+        "I created a text editor web application using HTML, CSS, and JavaScript. This project allowed me to strengthen my understanding of DOM manipulation, event handling, and responsive UI design while providing users with a smooth and intuitive editing experience.",
+      image: editorapp,
+      tags: ["HTML", "CSS", "JavaScript", "Responsive"],
+      github: "https://github.com/ashu1144/text_editor", // add your repo link
+      webapp: " ", // add your live app link
+    },
   ];  
 
 export const education = [

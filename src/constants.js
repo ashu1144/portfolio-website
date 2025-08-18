@@ -39,12 +39,14 @@ import pastevaltimg from './assets/Projects/PasteVault.jpeg'
 import BlinkitImg from "./assets/Projects/Blinkit.jpeg"
 import JwtImg from "./assets/Projects/JWT.jpeg"
 import Myntra from './assets/Projects/MYNTRA.jpeg'
+import Agency  from './assets/Projects/Agency_web.png'
 import editorapp from "./assets/Projects/editorApp.jpeg"
 import crudOperationImg from './assets/Projects/crud_operation.png'
 // Education Section Logo'
 import bwu from "./assets/education/bwu.jpeg"
 import pit from "./assets/education/pit.jpeg"
 import jharkand from "./assets/education/jharkand.avif"
+
 
 
 
@@ -107,7 +109,16 @@ export const SkillsInfo = [
       webapp: "https://ashu1144.github.io/Animation-website/",
     },
     {
-      id: 1,
+      id: 2,
+      title: "Agency Material UI website",
+      description:"I developed a responsive Agency Material UI website using React and Material UI, designed to work seamlessly on 📱 mobile & 🖥️ PC and tablets",
+      image:Agency,
+      tags: ["React JS", "Material UI", "Responsive", "More"],
+      github: "",
+      webapp: "",
+    },
+    {
+      id: 3,
       title: "PasteVault",
       description:
         " Create, Store, Edit, and Delete Pastes: Allows users to manage pastes with options to create, store, edit, or delete.",
@@ -117,7 +128,7 @@ export const SkillsInfo = [
       webapp: " ",
     },
     {
-      id: 3,
+      id: 4,
       title: "User CRUD Application",
       description:
         "This project is a full-stack User Management Application that demonstrates CRUD (Create, Read, Update, Delete) operations using React, Express.js, and MongoDB",
@@ -127,7 +138,7 @@ export const SkillsInfo = [
       webapp: " ",
     },
     {
-      id: 3,
+      id: 5,
       title: " Blinkit Web Clone",
       description:
         "I built a responsive Blinkit web clone using HTML, CSS, and JavaScript, designed to work seamlessly on 📱 mobile & 🖥️ PC and tablets ",
@@ -136,18 +147,9 @@ export const SkillsInfo = [
       github: "https://github.com/ashu1144/blinkit_clone",
       webapp: "https://ashu1144.github.io/blinkit_clone/",
     },
+    
     {
-      id: 4,
-      title: "JWT Auth System",
-      description:
-        "A full-stack authentication system built from scratch using Express.js and React. It features secure user registration and login with JWT token handling, where passwords are securely hashed using bcrypt, and tokens are stored in HTTP-only cookies to enhance protection against XSS and CSRF attacks. The React frontend improves user experience with real-time toast notifications and a dynamic typewriter effect for engaging UI elements📝 User Registration: Register new users with hashed passwords",
-      image: JwtImg,
-      tags: ["Express.js", "React.js", "(JWT)", "Api", "MongoDB", "more"],
-      github: "https://github.com/ashu1144/jwt",
-      webapp: " ",
-    },
-    {
-       id: 5,
+       id: 6,
       title: "Food Delivery App",
       description:
         "I developed a fully functional food delivery web application where users can browse restaurants, view menus, and place orders. This project enhanced my skills in building interactive user interfaces, managing state, and integrating APIs for real-time data handling.",
@@ -163,7 +165,7 @@ export const SkillsInfo = [
       webapp: "https://food-delivery-web-app-navy.vercel.app/", 
     },
     {
-      id: 6,
+      id: 7,
       title: "Text Editor",
       description:
         "I created a text editor web application using HTML, CSS, and JavaScript. This project allowed me to strengthen my understanding of DOM manipulation, event handling, and responsive UI design while providing users with a smooth and intuitive editing experience.",

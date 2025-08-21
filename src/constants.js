@@ -42,6 +42,7 @@ import Myntra from './assets/Projects/MYNTRA.jpeg'
 import Agency  from './assets/Projects/Agency_web.png'
 import editorapp from "./assets/Projects/editorApp.jpeg"
 import crudOperationImg from './assets/Projects/crud_operation.png'
+import chatbot from './assets/Projects/chatbot.png'
 // Education Section Logo'
 import bwu from "./assets/education/bwu.jpeg"
 import pit from "./assets/education/pit.jpeg"
@@ -99,14 +100,13 @@ export const SkillsInfo = [
   
   export const projects = [
     {
-      id: 0,
-      title: "Animation-website",
-      description:
-        "A fun and lively Minion‑themed website built with React, styled using Tailwind CSS, and brought to life with smooth animations powered by Framer Motion. This interactive site captures the mischievous charm of the Minions, making it a delightful experience for visitors. Deployed on GitHub Pages, it’s easily accessible and showcases a modern A fun and lively Minion‑themed website built with React, styled using Tailwind CSS, and brought to life with smooth animations powered by Framer Motion. This interactive site captures the mischievous charm of the Minions, making it a delightful experience for visitors. Deployed on GitHub Pages, it’s easily accessible and showcases a modern",
-      image: animationimg,
+      id: 1,
+      title: "ChatBot",
+      description:"I created an AI-powered chatbot using React (Vite), Gemini API, and Tailwind CSS. It has a clean and responsive interface where you can chat with the bot, ask questions, and get instant answers. I also added a chat history feature, so you can easily go back and see your previous search without losing context.",
+      image: chatbot,
       tags: ["React JS", "TailwindCSS", "Framer-motion", "More"],
-      github: "https://github.com/ashu1144/Animation-website",
-      webapp: "https://ashu1144.github.io/Animation-website/",
+      github: "",
+      webapp: "https://my-api-chatbot.vercel.app/",
     },
     {
       id: 2,
@@ -115,10 +115,20 @@ export const SkillsInfo = [
       image:Agency,
       tags: ["React JS", "Material UI", "Responsive", "More"],
       github: "",
-      webapp: "",
+      webapp: "https://agency-website-kappa.vercel.app/",
     },
     {
       id: 3,
+      title: "Animation-website",
+      description:
+        "A fun and lively Minion‑themed website built with React, styled using Tailwind CSS, and brought to life with smooth animations powered by Framer Motion. This interactive site captures the mischievous charm of the Minions, making it a delightful experience for visitors. Deployed on GitHub Pages, it’s easily accessible and showcases a modern A fun and lively Minion‑themed website built with React, styled using Tailwind CSS, and brought to life with smooth animations powered by Framer Motion.",
+      image: animationimg,
+      tags: ["React JS", "TailwindCSS", "Framer-motion", "More"],
+      github: "https://github.com/ashu1144/Animation-website",
+      webapp: "https://ashu1144.github.io/Animation-website/",
+    },
+    {
+      id: 4,
       title: "PasteVault",
       description:
         " Create, Store, Edit, and Delete Pastes: Allows users to manage pastes with options to create, store, edit, or delete.",
@@ -128,7 +138,7 @@ export const SkillsInfo = [
       webapp: " ",
     },
     {
-      id: 4,
+      id: 5,
       title: "User CRUD Application",
       description:
         "This project is a full-stack User Management Application that demonstrates CRUD (Create, Read, Update, Delete) operations using React, Express.js, and MongoDB",
@@ -138,7 +148,7 @@ export const SkillsInfo = [
       webapp: " ",
     },
     {
-      id: 5,
+      id: 6,
       title: " Blinkit Web Clone",
       description:
         "I built a responsive Blinkit web clone using HTML, CSS, and JavaScript, designed to work seamlessly on 📱 mobile & 🖥️ PC and tablets ",
@@ -149,7 +159,7 @@ export const SkillsInfo = [
     },
     
     {
-       id: 6,
+       id: 7,
       title: "Food Delivery App",
       description:
         "I developed a fully functional food delivery web application where users can browse restaurants, view menus, and place orders. This project enhanced my skills in building interactive user interfaces, managing state, and integrating APIs for real-time data handling.",
@@ -165,7 +175,7 @@ export const SkillsInfo = [
       webapp: "https://food-delivery-web-app-navy.vercel.app/", 
     },
     {
-      id: 7,
+      id: 8,
       title: "Text Editor",
       description:
         "I created a text editor web application using HTML, CSS, and JavaScript. This project allowed me to strengthen my understanding of DOM manipulation, event handling, and responsive UI design while providing users with a smooth and intuitive editing experience.",
